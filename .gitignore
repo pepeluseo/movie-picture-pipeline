@@ -1,0 +1,4 @@
+
+# local AWS credentials - do not commit
+setup/terrraform/aws-creds.sh
+setup/terrraform/aws-creds.sh

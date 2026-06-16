@@ -410,3 +410,5 @@ kustomize build | kubectl apply -f -
 ## License
 
 [License](LICENSE.md)
+frontend rebuild with production backend URL
+frontend rebuild with production backend URL
