@@ -412,3 +412,33 @@ kustomize build | kubectl apply -f -
 [License](LICENSE.md)
 frontend rebuild with production backend URL
 frontend rebuild with production backend URL
+
+## GitHub Repository
+
+The project repository is available at:
+
+[Movie Picture Pipeline GitHub Repository](https://github.com/pepeluseo/movie-picture-pipeline)
+
+---
+
+## GitHub Actions Verification Links
+
+The following GitHub Actions workflow pages provide traceable evidence for the CI/CD implementation and successful workflow runs.
+
+| Workflow | Purpose | Link |
+|---|---|---|
+| Frontend Continuous Integration | Lint, test, and build frontend on pull requests to `main` | [Frontend CI Workflow](https://github.com/pepeluseo/movie-picture-pipeline/actions/workflows/frontend-ci.yaml) |
+| Backend Continuous Integration | Lint, test, and build backend on pull requests to `main` | [Backend CI Workflow](https://github.com/pepeluseo/movie-picture-pipeline/actions/workflows/backend-ci.yaml) |
+| Frontend Continuous Deployment | Lint, test, build, push to ECR, and deploy frontend to EKS | [Frontend CD Workflow](https://github.com/pepeluseo/movie-picture-pipeline/actions/workflows/frontend-cd.yaml) |
+| Backend Continuous Deployment | Lint, test, build, push to ECR, and deploy backend to EKS | [Backend CD Workflow](https://github.com/pepeluseo/movie-picture-pipeline/actions/workflows/backend-cd.yaml) |
+
+---
+
+## Security Remediation
+
+A local AWS credential helper file was removed from the repository and added to `.gitignore`.
+
+AWS credentials are not stored in the repository. Deployment credentials are managed through GitHub Actions Secrets or temporary shell environment variables.
+
+Any exposed AWS access keys were rotated or revoked before resubmission.
+

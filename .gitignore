@@ -2,3 +2,16 @@
 # local AWS credentials - do not commit
 setup/terrraform/aws-creds.sh
 setup/terrraform/aws-creds.sh
+
+# Local AWS credentials - never commit
+setup/terraform/aws-creds.sh
+aws-creds.sh
+
+# Terraform local/generated files
+setup/terraform/.terraform/
+setup/terraform/.terraform.lock.hcl
+setup/terraform/terraform.tfstate
+setup/terraform/terraform.tfstate.backup
+*.tfstate
+*.tfstate.backup
+*.bak
